@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li><!--nav-item to display items as horizontal links-->
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginOpenBtn">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="loginCloseBtn">
                         &times;
                     </button>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-secondary btn-sm ml-auto" id="loginCloseBtn">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -81,7 +81,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="tableCloseBtn">
                         &times;
                     </button>
                 </div>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-md-2 col-md-10">
-                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">
+                                <button type="submit" class="btn btn-secondary" id="tableCloseBtn">
                                     Cancel
                                 </button>
                                 <button type="submit" class="btn btn-primary">
@@ -162,8 +162,7 @@
                     <!-- <a role="button" class="btn btn-block btn-sm btn-warning"
                     data-toggle="tooltip" data-html="true" title="or Call Us at <br><strong>+852 12345678</strong>" 
                     data-placement= "bottom" href="#res-form"> Reserve Table </a> -->
-                    <a role="button" class="btn btn-block btn-sm btn-warning"
-                    data-toggle="modal" data-target="#resModal">
+                    <a role="button" class="btn btn-block btn-sm btn-warning" id="tableOpenBtn">
                         Reserve Table 
                     </a>
                 </div>
@@ -373,29 +372,7 @@
         });
     </script> -->
 
-    <script>
-        $(document).ready(function(){
-            // $('.carousel').carousel({interval:2000});
-            // $("#carouselPause").click(function(){
-            //     $("#mycarousel").carousel('pause');
-            // });
-            // $("#carouselPlay").click(function(){
-            //     $("#mycarousel").carousel('cycle');
-            // });
-            $("#carouselButton").click(function(){
-                if($('#carouselButton').children('span').hasClass("fa-pause")){
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children('span').removeClass('fa-pause')
-                    $("#carouselButton").children('span').addClass('fa-play')
-                }  
-                else{
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children('span').removeClass('fa-play')
-                    $("#carouselButton").children('span').addClass('fa-pause')
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
